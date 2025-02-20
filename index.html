@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!--icon and title-->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!--fonts, icons and css-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <!--title-->
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+
+    <!--form starts-->
+    <form action="#" id="form">
+
+      <!--first block: first and last name-->
+      <div class="full-name">
+        <section class="first-name">
+          <label for="first-name" >First Name</label><span class="required">*</span>
+          <br>
+          <input type="text" id="first-name" name="first-name" aria-describedby="first-name-instructions" autocomplete="name" tabindex="0" required class="input">
+          <span id="name-error" class="error-message">This field is required</span>
+        </section>
+
+        <section class="last-name">
+          <label for="last-name">Last Name</label><span class="required">*</span>
+          <br>
+          <input type="text" id="last-name" name="lastname" aria-describedby="last-name-instructions" autocomplete="family-name" tabindex="0" required class="input">
+          <span id="lastname-error" class="error-message">This field is required</span>
+        </section>
+      </div>
+      <br>
+
+      <!--email-->
+      <section class="email-address">
+        <label for="email-address">Email Address</label><span class="required">*</span>
+        <br>
+        <input type="email" id="email-address" name="email-address" aria-describedby="email-address-instructions" autocomplete="email" tabindex="0" required class="input">
+        <span id="email-error" class="error-message">Please enter a valid email address</span>
+        <!-- <span id="email-required" class="error-message">This field is required</span> -->
+        <br>
+      </section>
+
+      <!--query type-->
+      <section class="query-type">
+        <label for="Query Type">Query Type<span class="required">*</span></label>
+        <br>
+        <div class="query-type-options"> 
+          <fieldset>
+            <label for="query-type" class="radio-option">
+              <input type="radio" name="query-type" aria-describedby="query-type" value="general-enquiry" tabindex="0">
+              <span>General Enquiry</span>
+            </label>
+
+            <label for="query-type" class="radio-option">
+              <input type="radio" name="query-type" aria-describedby="support-request"  value="support-request" tabindex="0">
+              <span>Support Request</span>
+            </label>
+          </fieldset>
+        </div>
+        <span id="query-error" class="error-message">Please select a query type</span>
+      </section>
+
+      <section class="message">
+        <label for="message">Message</label><span class="required">*</span>
+        <br>
+        <textarea type="text" id="message" name="message" aria-describedby="message" tabindex="0" class="input"></textarea>
+        <span id="message-error" class="error-message">This field is required</span>
+      </section>
+
+      <section class="consent">
+        <label for="consent">
+          <input type="checkbox" name="consent" aria-describedby="consent"  value="consent"  tabindex="0" required>
+          <span> I consent to being contacted by the team</span>
+          <br>
+          <span id="span-error" class="error-message">To submit this form, please consent to being contacted</span>
+        </label>
+      </section>
+
+      <button type="submit" value="Submit" class="submit">Submit</button>
+
+    </form>
+  </main>
+
+  <section class="thank-you hidden">
+    <img src="assets/images/icon-success-check.svg" alt=""> <span><h3> Message Sent!</h3></span> 
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+       
+  </section>
+
+  <footer class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io/profile/saccoViola"> Frontend Mentor</a>. Coded by <a href="#"> Denise Rizzi</a>.</p>
+    
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
