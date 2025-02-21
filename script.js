@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", ()=>{
-    // const form = document.getElementById("form");
+
     const firstName = document.getElementById("first-name");
     const lastName = document.getElementById("last-name");
     const emailAddress = document.getElementById("email-address");
@@ -24,11 +24,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
         firstNameError = firstName.nextElementSibling;
         if(firstNameField === ""){
             firstNameError.style.display = "block";
-            console.log("nome NON inserito")
             successSubmit = false;
             
         }else{
-            console.log("nome inserito")
             firstNameError.style.display = "none";
         }
 
@@ -36,11 +34,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
         lastNameError = lastName.nextElementSibling;
         if(lastNameField === ""){
             lastNameError.style.display = "block";
-            console.log("cognome NON inserito")
             successSubmit = false;
          
         }else{
-            console.log("cognome inserito")
             lastNameError.style.display = "none";
         
         }
@@ -49,22 +45,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
         emailError = emailAddress.nextElementSibling;
         if(emailValue === "" || !emailIsValid(emailValue)){
             emailError.style.display = "block";
-            console.log("l'indirizzo email NON è valido")
             successSubmit = false;
         }else{
             emailError.style.display = "none";
-            console.log("l'indirizzo email è valido");
         }
 
         textField = textArea.value.trim();
         textError = textArea.nextElementSibling;
         if(textField === ""){
             textError.style.display = "block";
-            console.log("NON hai inserito messaggio")
             successSubmit = false;
         }else{
             textError.style.display = "none";
-            console.log("messaggio inserito");
         }
 
         const queryError = document.getElementById("query-error");
@@ -95,9 +87,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         if(successSubmit){
             successMessage.style.display = "block";
-            console.log("tutto bene!")
         }else{successMessage.style.display = "none"; 
-            alert("compila tutti i campi!")}
+            alert("Please complete all fields!")}
     } 
    
 
